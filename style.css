@@ -1,0 +1,22 @@
+.non-vegitarian{
+    float: left;
+    margin: 2%;
+    block-size: 100px;
+
+}
+
+.vegitarian{
+    float: left;
+    margin: 2%;
+
+}
+
+.gluten-free{
+    float: left;
+    margin: 2%;
+  
+}
+
+.ingredient-options{
+    margin-top: 10%;
+}
