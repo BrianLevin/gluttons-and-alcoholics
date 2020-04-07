@@ -10,26 +10,26 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
 <body>
-  
     <nav class="uk-navbar uk-background-primary uk-margin" uk-navbar>
         <div class="uk-navbar-left">
-
             <a class="uk-navbar-item uk-logo uk-light">Gluttons and Alcoholics</a>
-
             <div class="uk-navbar-item uk-position-right">
                 <form action="javascript:void(0)">
                     <input class="uk-input uk-form-width-medium" type="text" placeholder="Ingredients">
                     <button class="uk-button uk-button-danger">Search</button>
                 </form>
             </div>
-
         </div>
     </nav>
 
-    <div class="row ingredient-options">
-        <div class="col-sm-4 non-vegitarian">
-            <button class="uk-button uk-button-default" type="button">Non-Vegitarian</button>
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+        <div id="non-vegetarian">
+            <img data-src="https://images.unsplash.com/photo-1542365887-1149961dccc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                width="" height="" alt="steak with knife" uk-img>
+            <button class="uk-button uk-button-default uk-background-primary uk-light"
+                type="button">Non-Vegetarian</button>
             <div uk-dropdown>
                 <ul class="uk-nav uk-dropdown-nav">
                     <li class="uk-active"><a href="#">Active</a></li>
@@ -42,8 +42,10 @@
                 </ul>
             </div>
         </div>
-        <div class="col-sm-4 vegitarian">
-            <button class="uk-button uk-button-default" type="button">Vegitarian</button>
+        <div id="vegetarian">
+            <img data-src="https://images.unsplash.com/photo-1557844352-761f2565b576?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                width="" height="" alt="fruits and vegetables" uk-img>
+            <button class="uk-button uk-button-default uk-background-primary uk-light" type="button">Vegetarian</button>
             <div uk-dropdown>
                 <ul class="uk-nav uk-dropdown-nav">
                     <li class="uk-active"><a href="#">Active</a></li>
@@ -56,8 +58,11 @@
                 </ul>
             </div>
         </div>
-        <div class="col-sm-4 gluten-free">
-            <button class="uk-button uk-button-default" type="button">Gluten-Free</button>
+        <div id="gluten-free">
+            <img data-src="https://images.unsplash.com/photo-1529566652340-2c41a1eb6d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                width="" height="" alt="food variety" uk-img>
+            <button class="uk-button uk-button-default uk-background-primary uk-light"
+                type="button">Gluten-Free</button>
             <div uk-dropdown>
                 <ul class="uk-nav uk-dropdown-nav">
                     <li class="uk-active"><a href="#">Active</a></li>
@@ -70,7 +75,8 @@
                 </ul>
             </div>
         </div>
-    </div>            
+    </div>
+
     <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
