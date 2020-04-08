@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <nav class="uk-navbar uk-background-primary uk-margin" uk-navbar>
+    <nav class=" uk-navbar uk-background-primary uk-margin" uk-navbar>
         <div class="uk-navbar-left">
             <a class="uk-navbar-item uk-logo uk-light">Gluttons and Alcoholics</a>
             <div class="uk-navbar-item uk-position-right">
@@ -33,14 +33,14 @@
             </div>
         </div>
     </nav>
-
-    <nav class="uk-navbar-container" uk-navbar="boundary-align: true">
+    <nav id="filterBar" class="uk-navbar-container" uk-navbar="boundary-align: true">
         <div class="uk-navbar-left">
+
             <ul class="uk-navbar-nav">
                 <li>
-                    <a href="#">Meal type</a>
-                    <div class="uk-navbar-dropdown">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <a href=" #">Meal type</a>
+                    <div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-justify">
+                        <ul class="uk-nav uk-navbar-dropdown-nav optionDropdown">
                             <li><input class="uk-checkbox" type="checkbox"> Breakfast</li>
                             <li><input class="uk-checkbox" type="checkbox"> Lunch</li>
                             <li><input class="uk-checkbox" type="checkbox"> Dinner</li>
@@ -48,57 +48,53 @@
                 </li>
                 <li>
                     <a href="#">Cuisine</a>
-                    <div class="uk-navbar-dropdown">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li><input class="uk-checkbox" type="checkbox">
-                                    Italian</li>
-                                <li><input class="uk-checkbox" type="checkbox"> French
-                                </li>
-                                <li><input class="uk-checkbox" type="checkbox"> Tex-Mex
-                                </li>
-                            </ul>
+                    <div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-justify">
+                        <ul class="uk-nav uk-navbar-dropdown-nav optionDropdown">
+                            <li><input class="uk-checkbox" type="checkbox">
+                                Italian</li>
+                            <li><input class="uk-checkbox" type="checkbox"> French
+                            </li>
+                            <li><input class="uk-checkbox" type="checkbox"> Tex-Mex
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li>
                     <a href="#">Dietary restrictions</a>
-                    <div class="uk-navbar-dropdown">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li><input class="uk-checkbox" type="checkbox">
-                                    Gluten-free</li>
-                                <li><input class="uk-checkbox" type="checkbox"> Vegetarian
-                                </li>
-                                <li><input class="uk-checkbox" type="checkbox"> Vegan
-                                </li>
-                            </ul>
+                    <div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-justify">
+                        <ul class="uk-nav uk-navbar-dropdown-nav optionDropdown">
+                            <li><input class="uk-checkbox" type="checkbox">
+                                Gluten-free</li>
+                            <li><input class="uk-checkbox" type="checkbox"> Vegetarian
+                            </li>
+                            <li><input class="uk-checkbox" type="checkbox"> Vegan
+                            </li>
+                        </ul>
                     </div>
                 </li>
             </ul>
         </div>
-    </nav>
+        <div class="uk-navbar-center">
+            <form class="uk-search uk-search-medium">
 
-    <form class="uk-search uk-search-large">
-
-        <div class="uk-margin-left">
-            <h6># of recipes to display</h6>
-            <select class="uk-select" id="results-num">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
+                <div class="uk-margin-center">
+                    <h4>Recipes to display</h4>
+                    <select class="uk-select" id="results-num">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+            </form>
         </div>
-
-
-    </form>
-
+    </nav>
 
     <div class="uk-child-width-expand@s uk-text-center" uk-grid>
         <div id="non-vegetarian">
@@ -137,8 +133,7 @@
         <div class="col-sm-4 gluten-free" id="cocktail">
             <img data-src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fresh-home-made-tequila-sunrise-cocktails-royalty-free-image-1581697157.jpg?"
                 width="" height="" alt="tequilaSunrise" uk-img>
-            <button class="uk-button uk-button-default uk-background-primary uk-light"
-                 type="button">Cocktails</button>
+            <button class="uk-button uk-button-default uk-background-primary uk-light" type="button">Cocktails</button>
             <div uk-dropdown>
                 <ul class="uk-nav uk-dropdown-nav">
                     <li class="uk-active"><a href="#">Active</a></li>
@@ -151,7 +146,7 @@
                 </ul>
             </div>
         </div>
-    </div>            
+    </div>
     </div>
 
     <div id=results-display class="uk-margin-left">
