@@ -55,25 +55,18 @@ $(document).ready(function () {
                     console.log(response.drinks[0].strDrink);
                     //var drink = response.drinks[0].strDrink;
                     var drinkName = $('<p class="uk-card-text"></p>').text("Pair with: " + response.drinks[0].strDrink);
-                    //recBody.append(drinkName);
-
-                    recBody.append(recTitle);
-                    recBody.append(recImg);
-                    recBody.append(recTime);
-                    recBody.append(recLink);
                     recBody.append(drinkName);
-                    recipeCard.append(recBody);
-                    $("#results-display").append(recipeCard);
+
 
                 });
 
-                /*recBody.append(recTitle);
+                recBody.append(recTitle);
                 recBody.append(recImg);
                 recBody.append(recTime);
                 recBody.append(recLink);
                 // recBody.append(drinkName);
                 recipeCard.append(recBody);
-                $("#results-display").append(recipeCard);*/
+                $("#results-display").append(recipeCard);
                 $("#results-display").append("<br>");
 
 
