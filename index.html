@@ -2,24 +2,172 @@
 <html>
 
 <head>
+
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
+    <!--fontawesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="style.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
+    <nav class="uk-navbar uk-background-primary uk-margin" uk-navbar>
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo uk-light">Gluttons and Alcoholics</a>
+            <div class="uk-navbar-item uk-position-right">
+                <form action="javascript:void(0)">
+                    <input class="uk-input uk-form-width-medium" type="text" placeholder="Ingredients"
+                        id="inputSearchTerm">
+                    <button type="button" class="uk-button uk-button-danger" id="search-btn"><i
+                            class="fas fa-search"></i>&nbsp;Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
-    <p>the contrary of virtue is not necessarily vice.</p>
+    <nav class="uk-navbar-container" uk-navbar="boundary-align: true">
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li>
+                    <a href="#">Meal type</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li><input class="uk-checkbox" type="checkbox"> Breakfast</li>
+                            <li><input class="uk-checkbox" type="checkbox"> Lunch</li>
+                            <li><input class="uk-checkbox" type="checkbox"> Dinner</li>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Cuisine</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><input class="uk-checkbox" type="checkbox">
+                                    Italian</li>
+                                <li><input class="uk-checkbox" type="checkbox"> French
+                                </li>
+                                <li><input class="uk-checkbox" type="checkbox"> Tex-Mex
+                                </li>
+                            </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Dietary restrictions</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><input class="uk-checkbox" type="checkbox" name="dietary-restriction"
+                                        value="gluten-free">
+                                    Gluten-free</li>
+                                <li><input class="uk-checkbox" type="checkbox" name="dietary-restriction"
+                                        value="vegetarian"> Vegetarian
+                                </li>
+                                <li><input class="uk-checkbox" type="checkbox" name="dietary-restriction" value="vegan">
+                                    Vegan
+                                </li>
+                            </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <!--JavaScript at end of body for optimized loading-->
-    <header> Gluttons and Alcoholics </header>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <form class="uk-search uk-search-large">
+
+        <div class="uk-margin-left">
+            <h6># of recipes to display</h6>
+            <select class="uk-select" id="results-num">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+        </div>
+
+
+    </form>
+
+
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+        <div id="non-vegetarian">
+            <img data-src="https://images.unsplash.com/photo-1542365887-1149961dccc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                width="" height="" alt="steak with knife" uk-img>
+            <button class="uk-button uk-button-default uk-background-primary uk-light" type="button">carnivore</button>
+            <div uk-dropdown>
+                <ul class="uk-nav uk-dropdown-nav">
+                    <li><a href="#">Item</a></li>
+                    <li class="uk-nav-header">Header</li>
+                    <li><a href="#">Item</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a href="#">Item</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="vegetarian">
+            <img data-src="https://images.unsplash.com/photo-1557844352-761f2565b576?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                width="" height="" alt="fruits and vegetables" uk-img>
+            <button class="uk-button uk-button-default uk-background-primary uk-light" type="button">herbivore</button>
+            <div uk-dropdown>
+                <ul class="uk-nav uk-dropdown-nav">
+                </ul>
+            </div>
+        </div>
+        <div id="gluten-free">
+            <img data-src="https://images.unsplash.com/photo-1529566652340-2c41a1eb6d93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                width="" height="" alt="food variety" uk-img>
+            <button class="uk-button uk-button-default uk-background-primary uk-light"
+                type="button">Gluten-Free</button>
+            <div uk-dropdown>
+                <ul class="uk-nav uk-dropdown-nav">
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-4 gluten-free" id="cocktail">
+            <img data-src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fresh-home-made-tequila-sunrise-cocktails-royalty-free-image-1581697157.jpg?"
+                width="" height="" alt="tequilaSunrise" uk-img>
+            <button class="uk-button uk-button-default uk-background-primary uk-light" type="button">Cocktails</button>
+            <div uk-dropdown>
+                <ul class="uk-nav uk-dropdown-nav">
+                    <li class="uk-active"><a href="#">Active</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li class="uk-nav-header">Header</li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a href="#">Item</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id=results-display class="uk-margin-left">
+
+    </div>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
     <!--jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--script.js-->
+    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
