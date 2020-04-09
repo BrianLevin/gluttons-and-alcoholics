@@ -26,27 +26,29 @@ $(document).ready(function () {
             // console.log(response.hits[0].recipe.label);
 
             var results = response.hits
+            var drinkCounter = 0;
 
             for (var i = 0; i < resultsNo; i++) {
 
                 var recipeCard = $('<div class="uk-card uk-card-default"></div>');
                 var recBody = $('<div class="uk-card-body"></div>');
-
-
-                //  console.log(results[i].recipe.label);
-
                 var recTitle = $('<h8 class="uk-card-title"></h8>').text((i + 1) + '\u00A0' + results[i].recipe.label);
 
                 var recTime = $('<p> class="uk-card-text"></p>').text(results[i].recipe.totalTime + " minutes");
                 var recImg = $("<br />" + '<img src=' + results[i].recipe.image + '>');
                 var recLink = $('<a class="uk-button uk-button-text"></a>').text("See Full Recipe");
+                var recPlaceholder = $('<p class="uk-card-text" id=drink-' + i + '></p>').text("test");
                 recLink.attr("href", results[i].recipe.shareAs)
+                recBody.append(recTitle);
+                recBody.append(recImg);
+                recBody.append(recTime);
+                recBody.append(recLink);
+                recBody.append(recPlaceholder);
+                // recBody.append(drinkName);
+                recipeCard.append(recBody);
+                $("#results-display").append(recipeCard);
+                $("#results-display").append("<br>");
 
-
-                // recipeCard.append(recBody);
-                //$("#results-display").append(recipeCard);
-
-                //var drinkName = "";
 
                 $.ajax({
                     url: cdbURL,
@@ -54,21 +56,11 @@ $(document).ready(function () {
                 }).then(function (response) {
                     console.log(response.drinks[0].strDrink);
                     //var drink = response.drinks[0].strDrink;
-                    var drinkName = $('<p class="uk-card-text"></p>').text("Pair with: " + response.drinks[0].strDrink);
-                    recBody.append(drinkName);
 
+                    $("#drink-" + drinkCounter).text("Pairs well: " + response.drinks[0].strDrink);
+                    drinkCounter++;
 
                 });
-
-                recBody.append(recTitle);
-                recBody.append(recImg);
-                recBody.append(recTime);
-                recBody.append(recLink);
-                // recBody.append(drinkName);
-                recipeCard.append(recBody);
-                $("#results-display").append(recipeCard);
-                $("#results-display").append("<br>");
-
 
             }
 
@@ -80,5 +72,7 @@ $(document).ready(function () {
     });
 
 });
+
+
 
 
