@@ -19,7 +19,7 @@ Enter Gluttons and Alcoholics. Pick the ingredients you have on hand or want to 
  - Cocktails
 3. Dynamically displaying results on HTML
 4. Timing issues with displaying results in modals
-4. Working on filtering criteria
+5. Working on filtering criteria
 
 **Next Steps**
 * Create rules for drink pairings (instead of random)
