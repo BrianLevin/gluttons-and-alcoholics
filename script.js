@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    var apiKey = "fec27e08be8e45a624b20783743de164";
-    var appID = "d5453b61"
+    var apiKey = "434808133d076f2691627d135ce2efbe";
+    var appID = "75913b4a"
 
     var queryURL = "";
     var cdbURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
