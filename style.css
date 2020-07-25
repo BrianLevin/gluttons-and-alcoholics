@@ -1,36 +1,58 @@
+.recipe-card{
+    padding-left: 0px;
+}
+
+#search-bar{
+    background-color: white;
+    width: 500px;
+
+}
+
+#search-btn{
+    float: right;
+}
+
 #non-vegetarian{
     float: left;
     margin: 2%;
-    block-size: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
+   
 }
 
 #vegetarian{
     float: left;
     margin: 2%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
-
 
 }
 
 #gluten-free{
     float: left;
     margin: 2%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
+
 
 }
 
 #cocktail{
     float: left;
     margin: 2%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 800;
+
     
 }
 
-.ingredient-options{
+.ingredient-options {
     margin-top: 10%;
+}
+
+.optionDropdown {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+#filterBar {
+    bottom: 20px;
+}
+
+.uk-card-default{
+    float: left;
+    margin: 2%;
+
 }
