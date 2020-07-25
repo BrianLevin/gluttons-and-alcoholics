@@ -5,6 +5,16 @@ With the COVID-19 pandemic shuttering restaurants and keeping everyone athome mo
 
 Enter Gluttons and Alcoholics. Pick the ingredients you have on hand or want to incorporate into your next meal. Filter your search by cuisine or dietary restrictions. Explore #recipes that fit your request. You will even find a drink you may never have heard of to pair with your next meal.
 
+ ## Click [here](https://brianlevin.github.io/gluttons-and-alcoholics) for the live app.
+ 
+ **Screenshots**
+The following images demonstrates the application functionality:
+
+![demo1](./Assets/1.png)
+![demo2](./Assets/2.png)
+
+After typing in the food  the user  wants and selecting from the drop down how many recipes they desire, a list of differant recipes paired with random cocktails will display on the mainpage:
+![demo2](./Assets/filteredresults.png)
 
 **Libraries/Framework**
 * jQuery
@@ -29,11 +39,4 @@ Enter Gluttons and Alcoholics. Pick the ingredients you have on hand or want to 
 * Include map of nearest grocery stores
 
 
-**Screenshots**
-The following image demonstrates the application functionality:
 
-![demo1](./Assets/1.png)
-![demo2](./Assets/2.png)
-
-**URL link to recipe app**
-https://brianlevin.github.io/gluttons-and-alcoholics
